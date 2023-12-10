@@ -1,4 +1,5 @@
 local trim_spaces = true
+
 vim.keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { noremap = true, silent = true })
 -- Keymap to close :ToggleTerm and return to normal mode
 vim.keymap.set("t", "<leader>t", "<C-\\><C-n>:ToggleTerm<CR>", { noremap = true, silent = true })

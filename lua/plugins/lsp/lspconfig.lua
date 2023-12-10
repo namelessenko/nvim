@@ -1,5 +1,6 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+lspconfig.texlab.setup {}
 lspconfig.pyright.setup {}
 lspconfig.clangd.setup {}
 lspconfig.julials.setup {}

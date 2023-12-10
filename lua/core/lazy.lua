@@ -51,6 +51,13 @@ require("lazy").setup({
   },
 },
 
+--Debugger
+{ "folke/neodev.nvim", opts = {} },
+
+{
+    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }
+},
+
 
 {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -96,6 +103,20 @@ require("lazy").setup({
 
 {
   "akinsho/toggleterm.nvim",
+},
+
+
+{
+    "michaelb/sniprun",
+    branch = "master",
+
+    build = "sh install.sh",
+    -- do 'sh install.sh 1' if you want to force compile locally
+    -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+},
+
+{
+    'lervag/vimtex',
 },
 
 --Autocompletion and snippets

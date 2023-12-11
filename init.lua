@@ -23,9 +23,9 @@ require("plugins.lsp.mason")
 require("plugins.lsp.mason-tool-installer")
 require("plugins.lsp.mason-lspconfig")
 
---Debug
-require("plugins.dap-ui")
-require("plugins.neodev")
+--Debug: Under dev
+require("plugins.debug.dap")
+
 --Wolfram and REPL
 --require("plugins.sniprun")
 

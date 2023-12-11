@@ -33,9 +33,10 @@ require("lazy").setup({
 {
    "ellisonleao/gruvbox.nvim", priority = 1000 , config = true
 },
-
+-----
+--LSP
 {
-  {"neovim/nvim-lspconfig"}, 
+  {"neovim/nvim-lspconfig"},
   {"hrsh7th/cmp-nvim-lsp"},
   {"hrsh7th/cmp-buffer"},
   {"hrsh7th/cmp-path"},
@@ -50,14 +51,27 @@ require("lazy").setup({
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
 },
-
---Debugger
-{ "folke/neodev.nvim", opts = {} },
-
+-----
+--Debug
 {
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }
+    'mfussenegger/nvim-dap',
 },
 
+{
+    "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = "mfussenegger/nvim-dap",
+},
+
+{
+    'folke/neodev.nvim'
+},
+
+{
+    'mfussenegger/nvim-dap-python'
+},
+
+-----
 
 {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -66,8 +80,10 @@ require("lazy").setup({
 
 
 {
-  "debugloop/telescope-undo.nvim",
-  dependencies = { -- note how they're inverted to above example
+
+    "debugloop/telescope-undo.nvim",
+
+    dependencies = { -- note how they're inverted to above example
     {
       "nvim-telescope/telescope.nvim",
       dependencies = { "nvim-lua/plenary.nvim" },
@@ -89,7 +105,8 @@ require("lazy").setup({
     'lewis6991/gitsigns.nvim'
 },
 
-{'romgrk/barbar.nvim',
+{
+    'romgrk/barbar.nvim',
     dependencies = {
       'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
       'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
@@ -97,12 +114,13 @@ require("lazy").setup({
 },
 
 {
-  'startup-nvim/startup.nvim',
-  requires = {'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim'},
+  
+    'startup-nvim/startup.nvim',
+    requires = {'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim'},
 },
 
 {
-  "akinsho/toggleterm.nvim",
+    "akinsho/toggleterm.nvim",
 },
 
 
@@ -127,7 +145,8 @@ require("lazy").setup({
 },
 --nvim-autopairs
 {
-'windwp/nvim-autopairs',
+
+    'windwp/nvim-autopairs',
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) functions
     }

@@ -26,9 +26,6 @@ require("plugins.lsp.mason-lspconfig")
 --Debug: Under dev
 require("plugins.debug.dap")
 
---Wolfram and REPL
---require("plugins.sniprun")
-
 --LaTeX
 --TODO: fix unworked command
 require("plugins.vimtex")

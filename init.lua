@@ -21,8 +21,6 @@ require("plugins.toggleterm")
 --LSP
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.mason")
-require("plugins.lsp.mason-tool-installer")
-require("plugins.lsp.mason-lspconfig")
 
 --Debug: Under dev
 require("plugins.debug.dap")

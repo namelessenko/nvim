@@ -51,6 +51,10 @@ require("lazy").setup({
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
 },
+
+{
+    'stevearc/conform.nvim',
+},
 -----
 --Debug
 {
@@ -130,7 +134,7 @@ require("lazy").setup({
 },
 
 {
-  
+
     'startup-nvim/startup.nvim',
     requires = {'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim'},
 },

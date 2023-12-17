@@ -22,5 +22,6 @@ require("gruvbox").setup({
   overrides = {},
   dim_inactive = false,
   transparent_mode = false,
+  floats = "transparent"
 })
 vim.cmd("colorscheme gruvbox")

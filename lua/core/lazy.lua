@@ -104,6 +104,10 @@ require("lazy").setup({
 },
 
 {
+  'rmagatti/goto-preview',
+},
+
+{
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
 },

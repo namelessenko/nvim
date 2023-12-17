@@ -1,10 +1,27 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.texlab.setup {}
-lspconfig.pyright.setup {}
+
+lspconfig.pyright.setup {
+        on_attach = on_attach,
+        settings =
+        {
+            pyright = {autoImportCompletion = true,},
+            python = {
+                analysis =
+                {
+                    autoSearchPaths = true,diagnosticMode = 'openFilesOnly',useLibraryCodeForTypes = true,typeCheckingMode = 'off'}
+                }
+            }
+}
+
+
 lspconfig.clangd.setup {}
+
 lspconfig.julials.setup {}
+
 lspconfig.tsserver.setup {}
+
 lspconfig.lua_ls.setup({
       --capabilities = capabilities,
       --on_attach = on_attach,

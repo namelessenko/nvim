@@ -13,7 +13,9 @@ lspconfig.pyright.setup {
                     autoSearchPaths = true,
                     diagnosticMode = 'openFilesOnly',
                     useLibraryCodeForTypes = true,
-                    typeCheckingMode = 'off'}
+                    typeCheckingMode = 'off',
+                    extraPaths = { "./", "/Users/namelessenko/Projects/PyProjects/3D_Inosov"}
+                }
                 }
             }
 }

@@ -35,7 +35,23 @@ vim.api.nvim_set_keymap('n', '<leader>dr', '<cmd>DapContinue<CR>', { noremap = t
 
 local dap = require("dap")
 local dapui = require("dapui")
-opts = {}
+opts = {
+    controls = {
+      element = "repl",
+      enabled = true,
+      icons = {
+        disconnect = "",
+        pause = "",
+        play = "",
+        run_last = "",
+        step_back = "",--"",
+        step_into = "",
+        step_out = "",
+        step_over = "",
+        terminate = ""
+      }
+    },
+}
 dapui.setup(opts)
 dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open({})

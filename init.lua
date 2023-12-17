@@ -10,11 +10,11 @@ require("core.configs")--this string should be lower then the colorschem callig
 
 --Plugins
 require("plugins.neotree")
+require("plugins.telescope")
+require("plugins.telescope-undo")
 require("plugins.treesitter")
 require("plugins.goto")
 require("plugins.cmp")
-require("plugins.telescope")
-require("plugins.telescope-undo")
 require("plugins.git")
 require("plugins.toggleterm")
 

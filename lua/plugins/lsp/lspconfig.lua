@@ -10,11 +10,13 @@ lspconfig.pyright.setup {
             python = {
                 analysis =
                 {
-                    autoSearchPaths = true,diagnosticMode = 'openFilesOnly',useLibraryCodeForTypes = true,typeCheckingMode = 'off'}
+                    autoSearchPaths = true,
+                    diagnosticMode = 'openFilesOnly',
+                    useLibraryCodeForTypes = true,
+                    typeCheckingMode = 'off'}
                 }
             }
 }
-
 
 lspconfig.clangd.setup {}
 

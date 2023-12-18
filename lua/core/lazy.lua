@@ -74,8 +74,17 @@ require("lazy").setup({
 {
     'mfussenegger/nvim-dap-python'
 },
-
 -----
+--Formatter
+{
+    "nvimtools/none-ls.nvim", -- configure formatters & linters
+  lazy = true,
+  -- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
+  dependencies = {
+    "jay-babu/mason-null-ls.nvim",
+  },
+},
+----
 --Comments
 -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
 {

@@ -21,6 +21,9 @@ require("plugins.toggleterm")
 --LSP
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.mason")
+--Formater
+require("plugins.lsp.none-ls")
+
 
 --Debug: Under dev
 require("plugins.debug.dap")

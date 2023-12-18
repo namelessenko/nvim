@@ -6,7 +6,7 @@ require("core.mapping")
 require("ui.lualine")
 require("ui.startup")
 require("ui.colorscheme")
-require("core.configs")--this string should be lower then the colorschem callig
+require("core.configs") --this string should be lower then the colorschem callig
 
 --Plugins
 require("plugins.neotree")
@@ -23,7 +23,6 @@ require("plugins.lsp.lspconfig")
 require("plugins.lsp.mason")
 --Formater
 require("plugins.lsp.none-ls")
-
 
 --Debug: Under dev
 require("plugins.debug.dap")

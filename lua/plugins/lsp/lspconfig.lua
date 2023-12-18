@@ -1,5 +1,6 @@
 -- Setup language servers.
 local lspconfig = require("lspconfig")
+
 lspconfig.texlab.setup({})
 
 lspconfig.jedi_language_server.setup({})
@@ -27,6 +28,36 @@ lspconfig.lua_ls.setup({
 		},
 	},
 })
+
+--Doesn't work
+local configs = require("lspconfig.configs")
+
+local enhance_attach = function(client, bufnr)
+	api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+end
+
+configs.lsp_wl = {
+	default_config = {
+		cmd = {
+			"wolfram",
+			"kernel",
+			"-noinit",
+			"-noprompt",
+			"-nopaclet",
+			"-noicon",
+			"-nostartuppaclets",
+			"-run",
+			'Needs["LSPServer`"];LSPServer`StartServer[]',
+		},
+		filetypes = { "mma", "wl" },
+		root_dir = lspconfig.util.path.dirname,
+	},
+}
+
+lspconfig.lsp_wl.setup({
+	on_attach = enhance_attach,
+})
+----
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

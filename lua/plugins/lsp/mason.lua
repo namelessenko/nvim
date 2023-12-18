@@ -15,8 +15,7 @@ require("mason-lspconfig").setup({
 require("mason-tool-installer").setup({
 	ensure_installed = {
 		"stylua", -- lua formatter
-		"isort", -- python formatter
-		"black", -- python formatter
-		"flake8",
+		"flake8", -- python
+		"cpplint", -- cpp
 	},
 })

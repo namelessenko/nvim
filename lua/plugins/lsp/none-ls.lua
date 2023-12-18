@@ -8,6 +8,7 @@ mason_null_ls.setup({
 	ensure_installed = {
 		"stylua", -- lua formatter
 		"flake8", -- python formatter
+		"cpplint",
 	},
 })
 
@@ -25,9 +26,8 @@ null_ls.setup({
 	-- setup formatters & linters
 	sources = {
 		formatting.stylua, -- lua formatter
-		formatting.isort,
-		formatting.black,
 		diagnostics.flake8,
+		diagnostics.cpplint,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

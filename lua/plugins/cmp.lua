@@ -28,7 +28,7 @@ cmp.setup({
 		{ name = "wl_lsp" },
 		{ name = "julials" },
 	}, {
-		{ name = "buffer" },
+		--{ name = "buffer" },
 		{ name = "path" },
 	}),
 })

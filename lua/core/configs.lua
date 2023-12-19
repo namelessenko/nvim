@@ -16,7 +16,7 @@ vim.opt.shell = "/bin/zsh"
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
-vim.o.guicursor="n-v-c-i:block"
+vim.o.guicursor = "n-v-c-i:block"
 
 -- Line Numbers
 vim.opt.number = true
@@ -41,14 +41,14 @@ vim.opt.smartindent = true
 
 -- Fillchars
 vim.opt.fillchars = {
-    vert = "│",
-    fold = "⠀",
-    eob = " ", -- suppress ~ at EndOfBuffer
-    -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
-    msgsep = "‾",
-    foldopen = "▾",
-    foldsep = "│",
-    foldclose = "▸"
+	vert = "│",
+	fold = "⠀",
+	eob = " ", -- suppress ~ at EndOfBuffer
+	-- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+	msgsep = "‾",
+	foldopen = "▾",
+	foldsep = "│",
+	foldclose = "▸",
 }
 
 vim.cmd([[highlight clear LineNr]])

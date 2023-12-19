@@ -30,7 +30,7 @@ lspconfig.lua_ls.setup({
 })
 
 --Doesn't work
-local configs = require("lspconfig.configs")
+--[[ local configs = require("lspconfig.configs")
 
 local enhance_attach = function(client, bufnr)
 	api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -56,7 +56,7 @@ configs.lsp_wl = {
 
 lspconfig.lsp_wl.setup({
 	on_attach = enhance_attach,
-})
+}) ]]
 ----
 
 -- Global mappings.

@@ -27,79 +27,6 @@ require("lazy").setup({
 	},
 
 	{
-		"neovim/nvim-lspconfig",
-	},
-
-	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		config = true,
-	},
-	-----
-	--LSP
-	{
-		{ "neovim/nvim-lspconfig" },
-		{ "hrsh7th/cmp-nvim-lsp" },
-		{ "hrsh7th/cmp-buffer" },
-		{ "hrsh7th/cmp-path" },
-		{ "hrsh7th/cmp-cmdline" },
-		{ "hrsh7th/nvim-cmp" },
-	},
-
-	{
-		"williamboman/mason.nvim",
-		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
-		},
-	},
-
-	{
-		"stevearc/conform.nvim",
-	},
-	-----
-	--Debug
-	{
-		"mfussenegger/nvim-dap",
-	},
-
-	{
-		"rcarriga/nvim-dap-ui",
-		event = "VeryLazy",
-		dependencies = "mfussenegger/nvim-dap",
-	},
-
-	{
-		"folke/neodev.nvim",
-	},
-
-	{
-		"mfussenegger/nvim-dap-python",
-	},
-	-----
-	--Formatter
-	{
-		"nvimtools/none-ls.nvim", -- configure formatters & linters
-		lazy = true,
-		-- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
-		dependencies = {
-			"jay-babu/mason-null-ls.nvim",
-		},
-	},
-	----
-	--Comments
-	-- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
-	{
-		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
-		lazy = false,
-	},
-
-	-----
-
-	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -117,6 +44,68 @@ require("lazy").setup({
 		},
 	},
 
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = true,
+	},
+
+	---LSP
+	{
+		{ "neovim/nvim-lspconfig" },
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "hrsh7th/cmp-buffer" },
+		{ "hrsh7th/cmp-path" },
+		{ "hrsh7th/cmp-cmdline" },
+		{ "hrsh7th/nvim-cmp" },
+	},
+
+	{
+		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+		},
+	},
+
+	---Debug
+	{
+		"mfussenegger/nvim-dap",
+	},
+
+	{
+		"rcarriga/nvim-dap-ui",
+		event = "VeryLazy",
+		dependencies = "mfussenegger/nvim-dap",
+	},
+
+	{
+		"folke/neodev.nvim",
+	},
+
+	{
+		"mfussenegger/nvim-dap-python",
+	},
+
+	--Formatter
+	{
+		"nvimtools/none-ls.nvim", -- configure formatters & linters
+		lazy = true,
+		-- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
+		dependencies = {
+			"jay-babu/mason-null-ls.nvim",
+		},
+	},
+
+	--Comments
+	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+		lazy = false,
+	},
+	--Others
 	{
 		"rmagatti/goto-preview",
 	},
@@ -166,11 +155,6 @@ require("lazy").setup({
 		"lervag/vimtex",
 	},
 
-	--Autocompletion and snippets
-	{
-		"hrsh7th/vim-vsnip",
-		"hrsh7th/vim-vsnip-integ",
-	},
 	--nvim-autopairs
 	{
 

@@ -2,5 +2,4 @@
 require("telescope").load_extension("undo")
 
 -- Configure key mappings
-vim.api.nvim_set_keymap('n', '<leader>u', '<cmd>Telescope undo<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap("n", "<leader>u", "<cmd>Telescope undo<CR>", { noremap = true, silent = true })

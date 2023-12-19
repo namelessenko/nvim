@@ -6,8 +6,10 @@ local null_ls_utils = require("null-ls.utils")
 
 mason_null_ls.setup({
 	ensure_installed = {
+
 		"flake8", --python linter
 		"cpplint", --c++ linter
+
 		"stylua", -- lua formatter
 		"autopep8", -- python formatter
 		"black", -- python formatter
@@ -28,8 +30,10 @@ null_ls.setup({
 	root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
 	-- setup formatters & linters
 	sources = {
+
 		diagnostics.flake8, --python linter
 		diagnostics.cpplint, --cpp linter
+
 		formatting.stylua, -- lua formatter
 		formatting.autopep8, --python formatter
 		formatting.black, -- python formatter

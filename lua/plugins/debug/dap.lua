@@ -1,11 +1,10 @@
 --Python
-require("dap-python").setup()
+require("dap-python").setup() --python3 -m pip install debugpy
 
 --C++
 require("dap").adapters.lldb = {
 	type = "executable",
-	command = "lldb-vscode", -- adjust as needed
-	--command = "~/.local/share/nvim/mason/packages/codelldb/codelldb",
+	command = "lldb-vscode", -- adjust as needed, should be in PATH, on mac os can be installed via homebrew install llvm
 	name = "lldb",
 }
 

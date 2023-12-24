@@ -2,6 +2,12 @@
 require("dap-python").setup() --python3 -m pip install debugpy
 
 --C++
+-- Also C++ can be configurated with mason-nvim-dap:
+-- 1. Install mason-nvim-dap and provide basic configuration like
+-- require("mason-nvim-dap").setup({
+--    ensure_installed = { "codelldb"}
+--})
+--2. And you do not need to configure like below only for cpp
 require("dap").adapters.lldb = {
 	type = "executable",
 	command = "lldb-vscode", -- adjust as needed, should be in PATH, on mac os can be installed via homebrew install llvm
@@ -25,6 +31,7 @@ require("dap").configurations.cpp = {
 	lldb, -- different debuggers or more configurations can be used here
 }
 
+--Keymaps
 vim.api.nvim_set_keymap("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>dr", "<cmd>DapContinue<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<leader>de", '<Cmd>lua require("dapui").eval()<CR>', { noremap = true, silent = true })

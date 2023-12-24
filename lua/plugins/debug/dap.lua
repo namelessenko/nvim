@@ -27,6 +27,7 @@ require("dap").configurations.cpp = {
 
 vim.api.nvim_set_keymap("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>dr", "<cmd>DapContinue<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>de", '<Cmd>lua require("dapui").eval()<CR>', { noremap = true, silent = true })
 
 --DAP UI
 local dap = require("dap")

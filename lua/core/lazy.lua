@@ -24,6 +24,7 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter-refactor",
 	},
 
 	{

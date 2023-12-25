@@ -176,4 +176,5 @@ require("lazy").setup({
 			})
 		end,
 	},
+	{ "echasnovski/mini.nvim", version = "*" },
 })

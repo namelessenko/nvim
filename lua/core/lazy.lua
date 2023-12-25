@@ -11,6 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+	--######################################
+	--Navigation
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -44,12 +46,15 @@ require("lazy").setup({
 			},
 		},
 	},
+	--######################################
 
+	--Theme
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = true,
 	},
+	--######################################
 
 	---LSP
 	{
@@ -69,6 +74,7 @@ require("lazy").setup({
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
 	},
+	--######################################
 
 	---Debug
 	{
@@ -88,7 +94,7 @@ require("lazy").setup({
 	{
 		"mfussenegger/nvim-dap-python",
 	},
-
+	--######################################
 	--Formatter
 	{
 		"nvimtools/none-ls.nvim", -- configure formatters & linters
@@ -98,7 +104,19 @@ require("lazy").setup({
 			"jay-babu/mason-null-ls.nvim",
 		},
 	},
-
+	--######################################
+	--Surrounds
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	},
+	--######################################
 	--Comments
 	{
 		"numToStr/Comment.nvim",
@@ -107,6 +125,7 @@ require("lazy").setup({
 		},
 		lazy = false,
 	},
+
 	--Others
 	{
 		"rmagatti/goto-preview",
@@ -145,15 +164,6 @@ require("lazy").setup({
 	},
 
 	{
-		"michaelb/sniprun",
-		branch = "master",
-
-		build = "sh install.sh",
-		-- do 'sh install.sh 1' if you want to force compile locally
-		-- (instead of fetching a binary from the github release). Requires Rust >= 1.65
-	},
-
-	{
 		"lervag/vimtex",
 	},
 
@@ -164,6 +174,7 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {}, -- this is equalent to setup({}) functions
 	},
+
 	{
 		"folke/which-key.nvim",
 		config = function()

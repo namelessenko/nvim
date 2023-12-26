@@ -7,7 +7,7 @@ local null_ls_utils = require("null-ls.utils")
 mason_null_ls.setup({
 	ensure_installed = {
 
-		"pylint", --python linter, has to be installed in your OS, brew install pylint
+		"pylint", --python linter, has to be installed in your pyenv condaenv, conda install pylint
 		"cpplint", --c++ linter
 
 		"stylua", -- lua formatter

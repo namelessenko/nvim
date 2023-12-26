@@ -14,7 +14,7 @@ require("mason-lspconfig").setup({
 
 require("mason-tool-installer").setup({
 	ensure_installed = {
-		"flake8", --python linter
+		"pylint", --python linter
 		"cpplint", --c++ linter
 
 		"stylua", -- lua formatter

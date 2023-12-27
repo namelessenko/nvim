@@ -10,7 +10,7 @@ require("ui.alpha")
 require("ui.mini")
 
 --Plugins
-require("plugins.neotree")
+require("plugins.neo-tree")
 require("plugins.telescope")
 require("plugins.telescope-undo")
 require("plugins.treesitter")

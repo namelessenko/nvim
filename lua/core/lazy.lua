@@ -78,6 +78,7 @@ require("lazy").setup({
 
 	---Debug
 	{
+		event = "VeryLazy",
 		"mfussenegger/nvim-dap",
 	},
 
@@ -92,6 +93,7 @@ require("lazy").setup({
 	},
 
 	{
+		event = "VeryLazy",
 		"mfussenegger/nvim-dap-python",
 	},
 	--######################################
@@ -151,12 +153,6 @@ require("lazy").setup({
 			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
 			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
 		},
-	},
-
-	{
-
-		"startup-nvim/startup.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	},
 
 	{

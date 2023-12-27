@@ -6,7 +6,7 @@ require("core.configs")
 
 --UI
 require("ui.lualine")
-require("ui.startup")
+require("ui.alpha")
 require("ui.mini")
 
 --Plugins

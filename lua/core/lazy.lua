@@ -160,6 +160,10 @@ require("lazy").setup({
 	},
 
 	{
+		"goolord/alpha-nvim",
+	},
+
+	{
 		"akinsho/toggleterm.nvim",
 	},
 

@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "python", "julia", "lua", "vim" },
+	ensure_installed = { "cpp", "python", "julia", "lua", "vim", "latex" },
 
 	sync_install = false,
 

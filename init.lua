@@ -18,7 +18,7 @@ require("plugins.goto")
 require("plugins.cmp")
 require("plugins.git")
 require("plugins.toggleterm")
-
+require("plugins.symbols-outline")
 --LSP
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.mason")

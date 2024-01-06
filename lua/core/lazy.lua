@@ -74,6 +74,10 @@ require("lazy").setup({
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
 	},
+
+	{
+		'simrat39/symbols-outline.nvim'	
+    },
 	--######################################
 
 	---Debug
